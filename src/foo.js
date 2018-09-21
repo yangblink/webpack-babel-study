@@ -1,3 +1,4 @@
+import './foo.css';
 const name = 'foo';
 const value = `${name} file`
 let foo = () => value;
