@@ -1,4 +1,4 @@
 const name = 'foo';
-
 const value = `${name} file`
-export default value;
+let foo = () => value;
+export default foo;

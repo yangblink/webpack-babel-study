@@ -90,11 +90,11 @@
 /*!********************!*\
   !*** ./src/foo.js ***!
   \********************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst name = 'foo';\n\nconst value = `${name} file`\n/* harmony default export */ __webpack_exports__[\"default\"] = (value);\n\n\n//# sourceURL=webpack:///./src/foo.js?");
+eval("\n\nexports.__esModule = true;\nexports.default = void 0;\nvar name = 'foo';\nvar value = name + \" file\";\n\nvar foo = function foo() {\n  return value;\n};\n\nvar _default = foo;\nexports.default = _default;\n\n//# sourceURL=webpack:///./src/foo.js?");
 
 /***/ }),
 
@@ -102,11 +102,11 @@ eval("__webpack_require__.r(__webpack_exports__);\nconst name = 'foo';\n\nconst 
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
-/*! no exports provided */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _foo_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./foo.js */ \"./src/foo.js\");\n/* harmony import */ var _temp_bar_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../temp/bar.js */ \"./temp/bar.js\");\nconsole.log(123);\n\n\nconsole.log('foo', _foo_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\n\n\nconsole.log(_temp_bar_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"]);\n\n//# sourceURL=webpack:///./src/index.js?");
+eval("\n\nvar _foo = _interopRequireDefault(__webpack_require__(/*! ./foo.js */ \"./src/foo.js\"));\n\nvar _bar = _interopRequireDefault(__webpack_require__(/*! ../temp/bar.js */ \"./temp/bar.js\"));\n\nfunction _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }\n\nconsole.log(123);\nconsole.log(_foo.default)();\nconsole.log((0, _bar.default)());\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
@@ -118,7 +118,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _foo
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst name = 'bar';\n\nconst value = `${name} file`\n/* harmony default export */ __webpack_exports__[\"default\"] = (value);\n\n\n//# sourceURL=webpack:///./temp/bar.js?");
+eval("__webpack_require__.r(__webpack_exports__);\nconst name = 'bar';\nconst value = `${name} file`\nlet bar = () => value;\n/* harmony default export */ __webpack_exports__[\"default\"] = (bar);\n\n\n//# sourceURL=webpack:///./temp/bar.js?");
 
 /***/ })
 

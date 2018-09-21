@@ -13,23 +13,20 @@ module.exports = {
 	  modules: false,
 	  children: false
 	},
-	// module: {
-	//   rules: [
-	//     {
-	//       test: /\.js$/,
-	//       exclude: /(node_modules|bower_components)/,
-	//       include: [
-	//       	path.resolve(__dirname, './src')
-	//       ],
-	//       use: {
-	//         loader: 'babel-loader',
-	//         options: {
-	//           presets: ['@babel/preset-env']
-	//         }
-	//       }
-	//     }
-	//   ]
-	// },
+	module: {
+	  rules: [
+	    {
+	      test: /\.js$/,
+	      exclude: /(node_modules|bower_components)/,
+	      include: [
+	      	path.resolve(__dirname, './src')
+	      ],
+	      use: {
+	        loader: 'babel-loader'
+	      }
+	    }
+	  ]
+	},
 	plugins: [
 		new HtmlWebpackPlugin({
 		  chunks: ['index'],
@@ -39,7 +36,7 @@ module.exports = {
 		})
 	],
 	devServer: {
-		quiet: true,
-		clientLogLevel: 'none'
+		// quiet: true,
+		// clientLogLevel: 'none'
 	}
 }
