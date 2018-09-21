@@ -9,6 +9,10 @@ module.exports = {
 		path: path.resolve(__dirname, './dist'),
 		filename: '[name].js',
 	},
+	stats: {
+	  modules: false,
+	  children: false
+	},
 	// module: {
 	//   rules: [
 	//     {
@@ -34,15 +38,8 @@ module.exports = {
 		  inject: true
 		})
 	],
-	serve: {
-	  open: true,
-	  host: '0.0.0.0',
-	  devMiddleware: {
-	    logLevel: 'warn'
-	  },
-	  hotClient: {
-	    logLevel: 'warn',
-	    allEntries: true
-	  }
-	},
+	devServer: {
+		quiet: true,
+		clientLogLevel: 'none'
+	}
 }
