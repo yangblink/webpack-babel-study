@@ -8,20 +8,22 @@ module.exports = function(api) {
         '@babel/preset-env',
         {
           loose: true,
-          modules: 'commonjs'
+          useBuiltIns: 'usage',
+          // modules: 'commonjs',
+          modules: false,
         }
       ]
     ],
-    // plugins: [
-    //   [
-    //     '@babel/plugin-transform-runtime',
-    //     {
-    //       corejs: false,
-    //       helpers: true,
-    //       regenerator: false
-    //     }
-    //   ],
-    // ]
+    plugins: [
+      [
+        '@babel/plugin-transform-runtime',
+        {
+          corejs: false,
+          helpers: true,
+          regenerator: false
+        }
+      ],
+    ]
   };
 };
 

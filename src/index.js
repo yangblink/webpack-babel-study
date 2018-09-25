@@ -1,7 +1,7 @@
-console.log(123);
+var foo = new Promise((rs, rj) => {
+	return rs('foo')
+})
 
-import foo from './foo.js'
-console.log(foo)();
-
-import bar from '../temp/bar.js'
-console.log(bar());
+foo.then(d => {
+	console.log(d);
+})

@@ -6,5 +6,16 @@
 </head>
 <body>
 	<h1>webpack-babel-study</h1>
+<script>
+	window.Promise = null;
+	console.log('Promise', Promise);
+</script>
+<script src="https://cdn.bootcss.com/axios/0.18.0/axios.js"></script>
+<script>
+	console.log('Promise after axios', Promise);
+</script>
 <script type="text/javascript" src="index.js"></script></body>
+<script>
+	console.log('Promise after index', Promise);
+</script>
 </html>

@@ -13,6 +13,9 @@ module.exports = {
 	  modules: false,
 	  children: false
 	},
+	optimization: {
+	  minimize: false
+	},
 	module: {
 	  rules: [
 	    {
